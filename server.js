@@ -92,7 +92,8 @@ app.get('/', (req, res) => {
   res.json({ status: 'Api2 Transporte rodando' })
 })
 
-const PORT = 3002
+// ✅ PORTA DINÂMICA
+const PORT = process.env.PORT || 3002
 app.listen(PORT, () => {
   console.log('Api2 rodando na porta', PORT)
 })
