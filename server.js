@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
-const bcrypt = require('bcryptjs') // atualizado
+const bcrypt = require('bcryptjs') // <-- atualizado
 const jwt = require('jsonwebtoken')
 const ExcelJS = require('exceljs')
 
@@ -161,7 +161,7 @@ app.get('/relatorio/mes', autenticar, (req, res) => {
 })
 
 // ----------------------------
-// Gerar planilha individual (exemplo)
+// Gerar planilha individual
 // ----------------------------
 app.get('/planilha', autenticar, async (req, res) => {
     const minhasViagens = viagens.filter(v => v.userId === req.userId)
